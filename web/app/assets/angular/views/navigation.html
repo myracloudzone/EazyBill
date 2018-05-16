@@ -1,0 +1,208 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav" style="background: #272727 !important;">
+  <a class="navbar-brand" href=""><img src="/app/assets/angular/images/running1.png" alt="" class="gymIcon"></img>   EazyBill</a>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarResponsive" >
+    <ul class="navbar-nav navbar-sidenav" id="exampleAccordion" ng-mouseenter="handleMouseEnter()" ng-mouseleave="handleMouseLeave()" >
+      <!-- <li class="nav-item text-center" ng-if="showUserImage()">
+        <div class="avatar-dash">
+            <img src="/app/assets/angular/images/avatars/avatar4.png" alt=""></img>
+        </div>
+      </li> -->
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard" ng-click="handleMouseLeave()">
+        <a class="nav-link"  ui-sref='home({ id: accountId })'>
+          <i class="fa fa-fw fa-home"></i>
+          <span class="nav-link-text ml5">Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Member" ng-click="handleMouseLeave()">
+        <a class="nav-link" ui-sref="member({id : accountId })">
+          <i class="fa fa-fw fa-user-plus"></i>
+          <span class="nav-link-text ml5">Client</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Membership Plan" ng-click="handleMouseLeave()">
+        <a class="nav-link"  ui-sref="plan({id : accountId })">
+          <i class="fa fa-fw fa-handshake-o"></i>
+          <span class="nav-link-text ml5">Sales</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Group" ng-click="handleMouseLeave()">
+        <a class="nav-link"  ui-sref="group({id : accountId })">
+          <i class="fa fa-fw fa-object-group"></i>
+          <span class="nav-link-text ml5">Finance</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables" ng-click="handleMouseLeave()">
+        <a class="nav-link"  ui-sref="activity({id : accountId })">
+          <i class="fa fa-fw fa-edit"></i>
+          <span class="nav-link-text ml5">Activity</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables" ng-click="handleMouseLeave()">
+        <a class="nav-link" ui-sref="user({id : accountId })">
+          <i class="fa fa-fw fa-users"></i>
+          <span class="nav-link-text ml5">Staff Member</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Accountant" ng-click="handleMouseLeave()">
+        <a class="nav-link" href="#/accountant">
+          <i class="fa fa-fw  fa-pie-chart"></i>
+          <span class="nav-link-text ml5">Accountant</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="payment" ng-click="handleMouseLeave()">
+        <a class="nav-link" href="#/payment">
+          <i class="fa fa-fw fa-money"></i>
+          <span class="nav-link-text ml5">Payment</span>
+        </a>
+      </li>
+      <!-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Payment" ng-click="handleMouseLeave()">
+        <a class="nav-link" href="#/nutritionSchedule">
+          <i class="fa fa-fw fa-heartbeat"></i>
+          <span class="nav-link-text ml5">Nutrition Schedule</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Product" ng-click="handleMouseLeave()">
+          <a class="nav-link"  ui-sref="product({id : accountId })">
+            <i class="fa fa-fw fa-product-hunt"></i>
+            <span class="nav-link-text ml5">Product</span>
+          </a>
+      </li> -->
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Message" ng-click="handleMouseLeave()">
+        <a class="nav-link" ui-sref="message({id : accountId })">
+          <i class="fa fa-fw fa-commenting"></i>
+          <span class="nav-link-text ml5">Message</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Report" ng-click="handleMouseLeave()">
+        <a class="nav-link" href="#/report">
+          <i class="fa fa-fw fa-wpforms"></i>
+          <span class="nav-link-text ml5">Report</span>
+        </a>
+      </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Setting" ng-click="handleMouseLeave()">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#settingComponents" data-parent="#exampleAccordion">
+          <i class="fa fa-fw fa-wrench"></i>
+          <span class="nav-link-text ml5">Setting</span>
+        </a>
+        <ul class="sidenav-second-level collapse settingBar" id="settingComponents">
+          <li>
+            <a href="navbar.html">General Setting</a>
+          </li>
+          <li>
+            <a href="cards.html" ui-sref='advanced({ id: accountId })'>Advanced Setting</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="navbar-nav sidenav-toggler">
+      <li class="nav-item" ng-click="toggleNavbar()">
+        <a class="nav-link text-center" id="sidenavToggler">
+          <i class="fa fa-fw fa-angle-left"></i>
+        </a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-fw fa-envelope"></i>
+          <span class="d-lg-none">Messages
+            <span class="badge badge-pill badge-primary">12 New</span>
+          </span>
+          <span class="indicator text-primary d-none d-lg-block">
+            <i class="fa fa-fw fa-circle"></i>
+          </span>
+        </a>
+        <div class="dropdown-menu" id="messagesDropdownBox" aria-labelledby="messagesDropdown" >
+          <h6 class="dropdown-header">New Messages:</h6>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">
+            <strong>David Miller</strong>
+            <span class="small float-right text-muted">11:21 AM</span>
+            <div class="dropdown-message small">Hey there! This new version of SB Admin is pretty awesome! These messages clip off when they reach the end of the box so they don't overflow over to the sides!</div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">
+            <strong>Jane Smith</strong>
+            <span class="small float-right text-muted">11:21 AM</span>
+            <div class="dropdown-message small">I was wondering if you could meet for an appointment at 3:00 instead of 4:00. Thanks!</div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">
+            <strong>John Doe</strong>
+            <span class="small float-right text-muted">11:21 AM</span>
+            <div class="dropdown-message small">I've sent the final files over to you for review. When you're able to sign off of them let me know and we can discuss distribution.</div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item small" href="#">View all messages</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fa fa-fw fa-bell"></i>
+          <span class="d-lg-none">Alerts
+            <span class="badge badge-pill badge-warning">6 New</span>
+          </span>
+          <span class="indicator text-warning d-none d-lg-block">
+            <i class="fa fa-fw fa-circle"></i>
+          </span>
+        </a>
+        <div class="dropdown-menu" id="notificationDropdownBox" aria-labelledby="alertsDropdown">
+          <h6 class="dropdown-header">New Alerts:</h6>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">
+            <span class="text-success">
+              <strong>
+                <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
+            </span>
+            <span class="small float-right text-muted">11:21 AM</span>
+            <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">
+            <span class="text-danger">
+              <strong>
+                <i class="fa fa-long-arrow-down fa-fw"></i>Status Update</strong>
+            </span>
+            <span class="small float-right text-muted">11:21 AM</span>
+            <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">
+            <span class="text-success">
+              <strong>
+                <i class="fa fa-long-arrow-up fa-fw"></i>Status Update</strong>
+            </span>
+            <span class="small float-right text-muted">11:21 AM</span>
+            <div class="dropdown-message small">This is an automated server response message. All systems are online.</div>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item small" href="#">View all alerts</a>
+        </div>
+      </li>
+      <li class="nav-item" ng-if="showUserImage()">
+        <div class="avatar-dash cursor-pointer" style="display: inline-flex">
+            <a id="accountSetingDropdown"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/app/assets/angular/images/avatars/avatar4.png" alt=""><md-tooltip md-direction="bottom">Akshay Soni</md-tooltip></img></a>
+            <a class="nav-link" data-toggle="modal" logout>
+                <i class="fa fa-fw fa-sign-out"></i>Logout</a>
+                <div class="dropdown-menu" id="accountSettingDropdownBox" aria-labelledby="accountSetingDropdown" >
+                    <a class="dropdown-item" href="" ng-click="changePassword()">
+                      <strong class="fs14">Change Password</strong>
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="">
+                      <strong class="fs14">Buy Credits</strong>
+                    </a>
+                  </div>
+        </div>
+        
+      </li>
+      <li class="nav-item">
+        <!-- <a class="nav-link" data-toggle="modal" logout>
+          <i class="fa fa-fw fa-sign-out"></i>Logout</a> -->
+      </li>
+    </ul>
+  </div>
+</nav>

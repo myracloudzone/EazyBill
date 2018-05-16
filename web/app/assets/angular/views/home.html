@@ -1,0 +1,51 @@
+<div ng-include="'/app/assets/angular/views/navigation.html'" ng-controller="NavigationCtrl"></div>
+<div class="content-wrapper mb40">
+    <div class="container-fluid mt60">
+        <div class="col-sm-12 plr0">
+            <div class="col-sm-12 col-xs-12 buttonBox text-right">
+                <button class="btn btn-primary">Add Client</button>
+                <button class="btn btn-primary">Import</button>
+            </div>
+            <div class="col-sm-12 plr0 mt10">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Search</div>
+                    <div class="panel-body">
+                        <div class="input-group col-sm-12 plr0">
+                            <input type="text" class="form-control search-form" placeholder="Search" ng-model="initVariables.search" ng-enter="fetchData()"/>
+                            <span class="input-group-btn">
+                            <button type="submit" class="btn btn-primary search-btn" name="q" ng-click="fetchData()"><i class="fa fa-search"></i>
+                            </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 mt10">
+                <div class="row">
+                    <div class="col-sm-12 serviceHeader">
+                        <div class="col-sm-12">
+                            <h6>Shri Goving Pharmacy</h6>
+                            <h6>Bagru Walaon Kas Rasta, Jaipur Rajasthan</h6>
+                            <h6>mailakkiy@gmail.com</h6>
+                            <h6>+917877439550</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>        
+<div ng-include="'/app/assets/angular/views/footer.html'"></div>
+<style>
+    .buttonBox {
+        background: rgba(0,0,0,.7);
+        font-weight: 600;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .serviceHeader {
+        background: #ddd;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+</style>
